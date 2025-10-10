@@ -81,6 +81,55 @@ h1 {
   font-weight: 700;
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
+.input-box{
+
+  width: 280px;           
+  padding: 12px 14px;      
+  margin: 12px auto; 
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1 rem;
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-box::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+.input-box:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100,108,255,0.25);
+}
+
+.input-box.correct {
+  border-color: #22c55e;          /* green */
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+}
+
+.input-box.wrong {
+  border-color: #ef4444;          /* red */
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.25);
+}
+
+.answer-area{
+  display: flex;
+  
+  margin-top: 1rem;
+
+}
+
+.controls{
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Back face rotated so it shows when flipped */
 .card-back {
@@ -110,6 +159,16 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  opacity: 0.5;                     /* make it look faded */
+  cursor: not-allowed;              /* gray “blocked” cursor */
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;                 /* removes glowing shadow */
+  transition: all 0.2s ease;
 }
 
 @media (prefers-color-scheme: light) {
